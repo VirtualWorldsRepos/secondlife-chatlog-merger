@@ -90,7 +90,6 @@ namespace SecondLifeLogMerger {
             Console.WriteLine();
             Console.WriteLine("Handled "+handled+" files, copied " + copied + " and merged " + merged);
             Console.WriteLine("done..");
-            Console.ReadKey();
         }
         public static void MergeFile(FileInfo file1, FileInfo file2, String outputPath) {
             StreamReader sr1 = new StreamReader(file1.OpenRead());
