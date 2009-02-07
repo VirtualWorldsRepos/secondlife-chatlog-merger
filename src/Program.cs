@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Reflection;
 namespace SecondLifeLogMerger {
     public class Program {
-        static Regex regex = new Regex(@"^\[(.+?/.+?/.+?\s.+?:.+?)\]\s\s(You|\w+\s\w+)(:\s|\s)");
+        static Regex regex = new Regex(@"^\[(.+?/.+?/.+?\s.+?:.+?)\]+?");
         static void Main(string[] args) {
             String output, input1, input2;
             if (args.Length > 1) {
@@ -99,6 +99,12 @@ namespace SecondLifeLogMerger {
             String line1 = sr1.ReadLine(), line2 = sr2.ReadLine();
             while(line1!=null||line2!=null)
             {
+                // Sometimes when SL crashes it messes up your chatlogs by adding \0 bytes to your files.
+                // Let's fix it before we merge ey ;)
+                if (line1 != null)
+                    line1 = line1.Replace("\0", "");
+                if (line2 != null)
+                    line2 = line2.Replace("\0", "");
                 if (line1 == null) {
                     sw.WriteLine(line2);
                     line2 = sr2.ReadLine();
