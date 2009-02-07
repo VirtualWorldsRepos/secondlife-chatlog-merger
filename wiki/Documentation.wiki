@@ -4,7 +4,7 @@
 = Introduction =
 
 usage:
-secondlife-chatlog-merger-1.0.0.exe source1 source2 [destination]
+secondlife-chatlog-merger-1.0.0.exe source1 source2 ![destination]
 
   source1       Chatlog location
   source2       Chatlog location 2 (read destination argument)
