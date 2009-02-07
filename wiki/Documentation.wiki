@@ -2,9 +2,12 @@
 #labels Featured,Phase-Deploy
 
 = Introduction =
+
+This tool will allow you to merge your [http://secondlife.com Second Life] chatlog files together. The merge destination can be one of the source paths. And if no destination is provided it will merge and store the merged files in the path specified in the source2 argument.
+
 {{{
 usage:
-secondlife-chatlog-merger-1.0.0.exe source1 source2 [[!destination]]
+secondlife-chatlog-merger-1.0.0.exe source1 source2 [destination]
 
   source1       Chatlog location
   source2       Chatlog location 2 (read destination argument)
@@ -14,9 +17,14 @@ secondlife-chatlog-merger-1.0.0.exe source1 source2 [[!destination]]
 
 = Examples =
 {{{
-secondlife-chatlog-merger-1.0.0.exe "\\Laptop\c\Users\Administrator\AppData\Roaming\SecondLife\aidamina_hunt" "C:\Users\Administrator\\AppData\\Roaming\SecondLife\aidamina_hunt"
+secondlife-chatlog-merger-1.0.0.exe "\\Laptop\C\Users\Administrator\AppData\Roaming\SecondLife\aidamina_hunt" "C:\Users\Administrator\\AppData\\Roaming\SecondLife\aidamina_hunt"
 }}}
-To sync any conversations on the "Aidamina Hunt" avatar from the computer \\Laptop to the current machine.
+To sync any conversations on the "Aidamina Hunt" avatar from the computer \\Laptop to the current machine. This modifies the chatlogs on your local machine.
+
+{{{
+secondlife-chatlog-merger-1.0.0.exe "\\Laptop\C\Users\Administrator\AppData\Roaming\SecondLife\aidamina_hunt" "C:\Users\Administrator\\AppData\\Roaming\SecondLife\aidamina_hunt" "C:\Logs"
+}}}
+To sync any conversations on the "Aidamina Hunt" avatar from the computer \\Laptop and current machine to the directory "c:\Logs". This will not modify any chatlogs, just merge them together and copy them to "C:\Logs"
 
 = Download =
 
