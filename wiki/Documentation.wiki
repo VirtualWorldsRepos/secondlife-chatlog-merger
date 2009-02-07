@@ -5,6 +5,8 @@
 
 This tool will allow you to merge your [http://secondlife.com Second Life] chatlog files together. The merge destination can be one of the source paths. And if no destination is provided it will merge and store the merged files in the path specified in the source2 argument.
 
+*Note: secondlife-chatlog-merger is currently only available as a commandline tool*
+
 {{{
 usage:
 secondlife-chatlog-merger-1.0.0.exe source1 source2 [destination]
@@ -16,6 +18,9 @@ secondlife-chatlog-merger-1.0.0.exe source1 source2 [destination]
 
 
 = Examples =
+
+The Examples below show how you can run secondlife-chatlog-merger. You can either create a shortcut in windows to run the command or run it directly from the commandline.
+
 {{{
 secondlife-chatlog-merger-1.0.0.exe "\\Laptop\C\Users\Administrator\AppData\Roaming\SecondLife\aidamina_hunt" "C:\Users\Administrator\\AppData\\Roaming\SecondLife\aidamina_hunt"
 }}}
