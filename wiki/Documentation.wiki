@@ -2,19 +2,20 @@
 #labels Featured,Phase-Deploy
 
 = Introduction =
-
+{{{
 usage:
 secondlife-chatlog-merger-1.0.0.exe source1 source2 [[!destination]]
 
   source1       Chatlog location
   source2       Chatlog location 2 (read destination argument)
   destination   Destination directory of the chatlogs, if not set it will overwrite the files in the path specified by the source2 argument.
-              
+}}}
 
 
 = Examples =
-
+{{{
 secondlife-chatlog-merger-1.0.0.exe "\\Laptop\c\Users\Administrator\AppData\Roaming\SecondLife\aidamina_hunt" "C:\Users\Administrator\\AppData\\Roaming\SecondLife\aidamina_hunt"
+}}}
 To sync any conversations on the "Aidamina Hunt" avatar from the computer \\Laptop to the current machine.
 
 = Download =
