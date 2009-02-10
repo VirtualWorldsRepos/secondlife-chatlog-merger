@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>src/Properties</AppDesignerFolder>
     <RootNamespace>SecondLifeLogMerger</RootNamespace>
-    <AssemblyName>secondlife-chatlog-merger.exe</AssemblyName>
+    <AssemblyName>secondlife-chatlog-merger</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

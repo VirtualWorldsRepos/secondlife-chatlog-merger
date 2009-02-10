@@ -37,7 +37,7 @@ namespace SecondLifeLogMerger {
                 outputdir = new DirectoryInfo(output);
                 inputFilelist1 = inputdir1.GetFiles("*.txt");
                 inputFilelist2 = inputdir2.GetFiles("*.txt");
-                //Test if output directory exists (throws exception if it doesn't)
+                // Test if output directory exists (throws exception if it doesn't)
                 outputdir.GetFiles();
             }
             catch (Exception e) {
@@ -133,6 +133,23 @@ namespace SecondLifeLogMerger {
                 }
                 DateTime dLine1 = DateTime.Parse(regex.Match(line1).Result("$1"));
                 DateTime dLine2 = DateTime.Parse(regex.Match(line2).Result("$1"));
+
+                // Prevent chatlog corruption by faulty timesettings
+                DateTime now = DateTime.Now;
+                if (dLine1 > now)
+                {
+                    sw.WriteLine(line1);
+                    line1 = sr1.ReadLine();
+                    continue;
+                }
+                if (dLine2 > now)
+                {
+                    sw.WriteLine(line2);
+                    line2 = sr2.ReadLine();
+                    continue;
+                }
+
+                // Merge magic
                 if (dLine1 < dLine2) {
                     sw.WriteLine(line1);
                     line1 = sr1.ReadLine();
