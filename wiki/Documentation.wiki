@@ -33,4 +33,4 @@ To sync any conversations on the "Aidamina Hunt" avatar from the computer \\Lapt
 
 = Download =
 
-[http://secondlife-chatlog-merger.googlecode.com/files/secondlife-chatlog-merger-1.0.0.exe Download secondlife-chatlog-merger-1.0.0.exe]
+[http://code.google.com/p/secondlife-chatlog-merger/downloads Download secondlife-chatlog-merger-1.0.0.exe]
